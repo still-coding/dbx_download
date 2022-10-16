@@ -1,2 +1,2 @@
 # dbx_download
-Primivite Dropbox downloader for backup
+Primitive Dropbox downloader for backup. Read about tokens [here](https://www.codemzy.com/blog/dropbox-long-lived-access-refresh-token)
