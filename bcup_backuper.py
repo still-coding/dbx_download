@@ -45,7 +45,7 @@ if __name__ == '__main__':
     parser.add_argument('--path', type=dir_path)
     args = parser.parse_args()
     backup_path = args.path
-    if backup_path and exists(backup_path):
+    if backup_path and dir_path(backup_path) and exists(backup_path):
         print('Downloading vault...')
         vault_filename_template = join(backup_path, f'{VAULT_FILENAME}')
         filename = f'{vault_filename_template}_{datetime.now().date()}'
@@ -58,4 +58,4 @@ if __name__ == '__main__':
             remove(vaults[0])
         print('Done!')
     else:
-        print(f'Backup path {backup_path} does not exist!')
+        print(f'Backup path {backup_path} does not exist. Did you forgot to add --path key?')
